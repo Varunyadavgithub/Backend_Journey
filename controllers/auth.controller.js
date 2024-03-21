@@ -54,7 +54,7 @@ exports.signin = async (req, res) => {
   }
 
   // Password is correct
-  const isPasswordValid = bcrypt.compare(req.body.password, user.password);
+  const isPasswordValid = bcrypt.compareSync(req.body.password, user.password);
   if (!isPasswordValid) {
     return res.status(401).send({
       message: "Wrong password passed",
