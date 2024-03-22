@@ -53,6 +53,7 @@ async function init() {
 
 // Stich the route to the server
 require("./routes/auth.routes")(app);
+require("./routes/category.routes")(app);
 
 // Start the server on port no. 8000
 app.listen(server_config.PORT, () => {
